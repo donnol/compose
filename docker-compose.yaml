@@ -1,0 +1,8 @@
+version: '2.3' # 版本换为3.3也可以
+services:
+  server:
+    image: curlimages/curl
+    command: curl http://host.docker.internal:8080 # 访问主机上的服务
+    # command: curl http://localhost:8080
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
